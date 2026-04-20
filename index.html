@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacienda Popalito — Senderismo, Caballo y Camping en San Rafael, Antioquia</title>
+  <meta name="description" content="Experiencia de montaña con sentido en San Rafael, Antioquia. Senderismo, cabalgata, Camping,  siembra de árbol, comida orgánica y conexión con la naturaleza. Reserva tu cupo.">
+  <meta name="keywords" content="hacienda popalito, senderismo antioquia, san rafael, turismo rural, camping, cabalgata,  siembra de árboles, experiencia naturaleza colombia">
+  <meta property="og:title" content="Hacienda Popalito — Senderismo, Caballo y Camping en San Rafael, Antioquia">
+  <meta property="og:description" content="Una experiencia de montaña con sentido: senderismo, siembra de árbol y conexión real con la naturaleza.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">Hacienda Popalito</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menú">☰</button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#experiencia">Aventura</a></li>
+        <li><a href="#ritual">El Ritual</a></li>
+        <li><a href="#incluye">Qué Incluye</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+        <li><a href="#reserva" class="nav__cta">Reservar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO CON VIDEO -->
+  <section class="hero" id="hero">
+    <!-- Video de fondo: reemplazar src con tu video real (.mp4) -->
+    <video class="hero__video" autoplay muted loop playsinline poster="images/hero-bg.jpg">
+      <source src="videos/hero-loop.mp4" type="video/mp4">
+      <!-- Si no hay video, se muestra el poster (hero-bg.jpg) -->
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__particles" id="particles"></div>
+    <div class="hero__content">
+      <p class="hero__pretitle">Hacienda Popalito — San Rafael, Antioquia</p>
+      <h1 class="hero__title">Siembra un árbol en la montaña.<br>Deja un mensaje para tu yo del futuro.</h1>
+      <p class="hero__services">Senderismo · Paseo a caballo · Camping</p>
+      <span class="hero__badge">🌿 Solo 4 fechas al mes — desde $280.000</span>
+      <p class="hero__phone">📲 +57 322 295 4445</p>
+      <div class="hero__cta">
+        <a href="#reserva" class="btn btn--primary btn--glow">Reservar Aventura</a>
+        <a href="https://wa.me/573222954445?text=Hola%2C%20quiero%20reservar%20una%20experiencia%20en%20Hacienda%20Popalito." class="btn btn--whatsapp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.574-1.47A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-2.169 0-4.207-.578-5.963-1.585l-.428-.254-2.715.873.725-2.633-.279-.443A9.77 9.77 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+          Pregunta sin compromiso
+        </a>
+      </div>
+      <div class="hero__scroll">
+        <span>Descubre más</span>
+        <div class="hero__scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <section class="proof-bar">
+    <div class="container proof-bar__inner">
+      <div class="proof-bar__item">
+        <span class="proof-bar__number" data-target="247">0</span>
+        <span class="proof-bar__label">Árboles sembrados</span>
+      </div>
+      <div class="proof-bar__item">
+        <span class="proof-bar__number" data-target="89">0</span>
+        <span class="proof-bar__label">Visitantes felices</span>
+      </div>
+      <div class="proof-bar__item">
+        <span class="proof-bar__number" data-target="5">0</span>
+        <span class="proof-bar__label">Estrellas promedio</span>
+      </div>
+      <div class="proof-bar__item">
+        <span class="proof-bar__number" data-target="3">0</span>
+        <span class="proof-bar__label">Años regenerando</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section" id="testimonios">
+    <div class="container">
+      <h2 class="section__title reveal">Ellos ya lo vivieron</h2>
+      <p class="section__subtitle reveal">5 estrellas en Google — reviews reales de quienes ya vivieron esto</p>
+      <div class="testimonials" id="testimoniosGrid">
+        <div class="testimonial reveal">
+          <img class="testimonial__photo" src="images/testimonio-sandro.jpg" alt="Sandro F." loading="lazy">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"¡La montaña me llamó! Este lugar es mágico, sientes la energía desde que empiezas a subir. La vista majestuosa, el almuerzo que sabe a cielo. Este lugar llega a ti justo cuando lo necesitas."</p>
+          <span class="testimonial__author">— Sandro F., Colombia</span>
+        </div>
+        <div class="testimonial reveal">
+          <img class="testimonial__photo" src="images/testimonio-fredy.jpg" alt="Fredy C." loading="lazy">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"Es mucho más que un viaje a la montaña. Te conecta profundamente con la naturaleza y contigo mismo. Plantamos árboles, escribimos una carta a nuestro yo del futuro… un momento muy especial. Esto es para quienes buscan más que turismo: una experiencia con propósito."</p>
+          <span class="testimonial__author">— Fredy C., Antioquia</span>
+        </div>
+        <div class="testimonial reveal">
+          <img class="testimonial__photo" src="images/testimonio-julian.jpg" alt="Julian R." loading="lazy">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"Le daría 7 u 8 estrellas si pudiera. Fue un día mágico. Si quieres desconectarte de la monotonía, las mejores vistas, conversaciones interesantes y comida deliciosa… este es el lugar. Espero volver a ver cómo creció mi árbol."</p>
+          <span class="testimonial__author">— Julian R., Medellín</span>
+        </div>
+      </div>
+      <!-- CTA después de testimonios -->
+      <div class="cta-break reveal">
+        <p>Ellos ya lo vivieron. Las próximas fechas se están llenando.</p>
+        <a href="#reserva" class="btn btn--primary btn--glow">Reservar Mi Fecha</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="section section--alt" id="experiencia">
+    <div class="container">
+      <h2 class="section__title reveal">Así se siente el senderismo</h2>
+      <p class="section__subtitle reveal">Cada etapa es especial — entre 5 y 7 horas de magia</p>
+      <div class="timeline">
+        <div class="timeline__line"></div>
+        <div class="timeline__step reveal">
+          <span class="timeline__number">1</span>
+          <div class="timeline__content">
+            <h3>Sientes la energía desde que llegas</h3>
+            <p>Llegas, apagas el celular, y sientes algo distinto en el aire. Café de la finca, la montaña esperando. Tu cuerpo ya sabe que hoy es diferente.</p>
+          </div>
+        </div>
+        <div class="timeline__step reveal">
+          <span class="timeline__number">2</span>
+          <div class="timeline__content">
+            <h3>El sendero solo mejora</h3>
+            <p>Cada paso te lleva más adentro. Bosque, agua, tierra. Sin prisa, sin destino urgente. Conversaciones que fluyen. Silencios que no incomodan.</p>
+          </div>
+        </div>
+        <div class="timeline__step reveal">
+          <span class="timeline__number">3</span>
+          <div class="timeline__content">
+            <h3>La vista majestuosa</h3>
+            <p>Llegas al mirador y el paisaje es tan grande que tus pensamientos se hacen pequeños. Las fotos no le hacen justicia. Hay que vivirlo.</p>
+          </div>
+        </div>
+        <div class="timeline__step reveal">
+          <span class="timeline__number">4</span>
+          <div class="timeline__content">
+            <h3>Tierra entre las manos</h3>
+            <p>Llegas al lugar de siembra. Silencio. Algo cambia adentro.</p>
+          </div>
+        </div>
+        <div class="timeline__step reveal">
+          <span class="timeline__number">5</span>
+          <div class="timeline__content">
+            <h3>Un almuerzo que sabe a cielo</h3>
+            <p>Los mejores frijoles que has probado. Comida deliciosa de la finca, sabor auténtico de montaña antioqueña. Sin prisa. Solo comer y estar presente.</p>
+          </div>
+        </div>
+        <div class="timeline__step reveal">
+          <span class="timeline__number">6</span>
+          <div class="timeline__content">
+            <h3>La llegada cálida</h3>
+            <p>Agua fría del charco. Risas. La sensación de que este lugar es mágico y llegó a ti justo cuando lo necesitabas. Vuelves queriendo regresar.</p>
+          </div>
+        </div>
+      </div>
+      <!-- CTA INTERMEDIO -->
+      <div class="cta-break reveal">
+        <p>El mes pasado 3 grupos se quedaron sin cupo. No esperes.</p>
+        <a href="#reserva" class="btn btn--primary btn--glow">Reservar Mi Fecha</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RITUAL -->
+  <section class="section" id="ritual">
+    <div class="container">
+      <div class="ritual__grid">
+        <div class="ritual__image reveal reveal--left">
+          <img src="images/ritual-siembra.jpg" alt="Ritual de siembra de árbol en Hacienda Popalito" loading="lazy">
+        </div>
+        <div class="ritual__text reveal reveal--right">
+          <h2 class="section__title section__title--left">Esto pasa en las 3 aventuras</h2>
+          <p>Sin importar si caminas, vas a caballo o te quedas a acampar: siembras un árbol con tus manos, escribes una carta a tu yo del futuro y te conviertes en Guardián de la Montaña.</p>
+          <p>No es una actividad más del recorrido. Es el momento que la gente más recuerda. Algo se conecta adentro que no tiene explicación. Solo se siente.</p>
+          <blockquote class="ritual__quote">
+            "Plantamos árboles y escribimos una carta a nuestro yo del futuro. Asumimos el rol de guardianes de la montaña. Un momento muy especial." — Fredy C.
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYE -->
+  <section class="section section--alt" id="incluye">
+    <div class="container">
+      <h2 class="section__title reveal">¿Qué incluye?</h2>
+
+      <!-- TRES EXPERIENCIAS -->
+      <div class="experiencias reveal">
+        <p class="experiencias__intro">Lo que leíste arriba es el senderismo. Pero hay 3 formas de vivir esto:</p>
+        <h3 class="experiencias__subtitle">Elige tu aventura</h3>
+        <div class="experiencias__grid">
+          <div class="experiencia-card">
+            <span class="experiencia-card__icon">🦶</span>
+            <h4>Senderismo</h4>
+            <p>Caminas la montaña a tu ritmo. Senderos, miradores, siembra de árbol y almuerzo. La aventura completa a pie.</p>
+            <span class="experiencia-card__tag">La clásica</span>
+          </div>
+          <div class="experiencia-card">
+            <span class="experiencia-card__icon">🐎</span>
+            <h4>Paseo a caballo</h4>
+            <p>La misma magia sin caminar. Recorres la montaña a caballo, siembras tu árbol y vives la aventura completa. Para quienes quieren la aventura a otro ritmo.</p>
+            <span class="experiencia-card__tag">Sin caminar</span>
+          </div>
+          <div class="experiencia-card">
+            <span class="experiencia-card__icon">⛺</span>
+            <h4>Camping</h4>
+            <p>Todo lo anterior + una noche en la montaña. Fogata, cielo estrellado y amanecer entre nubes. Para quienes quieren que la sensación dure más.</p>
+            <span class="experiencia-card__tag">Noche en la montaña</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUÉ INCLUYE SIEMPRE -->
+      <p class="includes__label reveal">Todas las aventuras incluyen:</p>
+      <div class="includes__grid">
+        <div class="include-card reveal">
+          <span class="include-card__icon">🧑🌾</span>
+          <h3>Guía local</h3>
+          <p>Acompañamiento durante toda la aventura</p>
+        </div>
+        <div class="include-card reveal">
+          <span class="include-card__icon">🌱</span>
+          <h3>Siembra de árbol</h3>
+          <p>Tu propio árbol plantado en la montaña</p>
+        </div>
+        <div class="include-card reveal">
+          <span class="include-card__icon">🍲</span>
+          <h3>Desayuno/almuerzo orgánico</h3>
+          <p>Comida de la finca con ingredientes locales</p>
+        </div>
+        <div class="include-card reveal">
+          <span class="include-card__icon">🏔️</span>
+          <h3>Miradores</h3>
+          <p>Acceso a puntos panorámicos de la montaña</p>
+        </div>
+        <div class="include-card reveal">
+          <span class="include-card__icon">💧</span>
+          <h3>Piscina natural</h3>
+          <p>Charco o piscina natural para refrescarte</p>
+        </div>
+        <div class="include-card reveal">
+          <span class="include-card__icon">📖</span>
+          <h3>Libro de guardianes</h3>
+          <p>Escribes un mensaje para tu yo del futuro</p>
+        </div>
+        <div class="include-card reveal">
+          <span class="include-card__icon">🛡️</span>
+          <h3>Seguro de asistencia</h3>
+          <p>Cobertura durante toda la aventura</p>
+        </div>
+      </div>
+      <div class="pricing reveal">
+        <p class="pricing__anchor"><del id="precioAnterior">$350.000 COP</del></p>
+        <p class="pricing__from">Desde <strong id="precioActual">$280.000 COP</strong> por persona — incluye todo</p>
+        <span class="pricing__badge">🔥 Precio de lanzamiento</span>
+        <p class="pricing__note">El valor final depende del plan y número de personas. Grupos de 6 a 12. Aventuras privadas desde 2 personas.</p>
+        <a href="https://wa.me/573222954445?text=Hola%2C%20quiero%20cotizar%20una%20aventura%20en%20Hacienda%20Popalito." class="btn btn--primary" target="_blank" rel="noopener">Pregunta sin compromiso</a>
+        <p class="pricing__urgency">⚡ Precio de lanzamiento válido solo para las próximas fechas disponibles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARACIÓN: ALLÁ vs ACÁ -->
+  <section class="section" id="comparacion">
+    <div class="container">
+      <div class="comparacion reveal">
+        <h2 class="section__title">Tu sábado normal vs. un día que no vas a olvidar</h2>
+        <div class="comparacion__grid">
+          <div class="comparacion__col comparacion__col--alla">
+            <h3>Allá</h3>
+            <ul>
+              <li>Te despiertas con 14 notificaciones</li>
+              <li>Scroll en la cama 40 minutos</li>
+              <li>Almuerzo viendo el celular</li>
+              <li>Netflix hasta dormirte</li>
+              <li>Domingo: ansiedad del lunes</li>
+            </ul>
+          </div>
+          <div class="comparacion__col comparacion__col--aca">
+            <h3>Acá</h3>
+            <ul>
+              <li>Te despiertas con el sonido del agua</li>
+              <li>Café de la finca mirando la montaña</li>
+              <li>Almuerzo orgánico sin prisa</li>
+              <li>Siembras un árbol con tus manos</li>
+              <li>Domingo: la cabeza liviana por primera vez</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTO NO ES PARA TI SI... -->
+  <section class="section section--alt" id="no-es-para-ti">
+    <div class="container">
+      <div class="not-for-you reveal">
+        <h2 class="section__title">Esto NO es para ti si...</h2>
+        <div class="not-for-you__grid">
+          <ul class="not-for-you__list not-for-you__list--no">
+            <li>❌ Buscas fiesta, rumba o turismo masivo</li>
+            <li>❌ Quieres todo incluido con piscina de hotel</li>
+            <li>❌ No te gusta estar al aire libre</li>
+            <li>❌ Prefieres velocidad sobre profundidad</li>
+          </ul>
+          <ul class="not-for-you__list not-for-you__list--yes">
+            <li>✓ Buscas una pausa real lejos del ruido</li>
+            <li>✓ Te conecta la naturaleza y el silencio</li>
+            <li>✓ Quieres vivir algo con significado</li>
+            <li>✓ Valoras lo auténtico sobre lo masivo</li>
+          </ul>
+        </div>
+        <p class="not-for-you__closing">Si te identificas con la columna derecha, este lugar te está esperando.</p>
+        <a href="#reserva" class="btn btn--primary btn--glow">Reservar Mi Fecha</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTÍA -->
+  <section class="section" id="garantia">
+    <div class="container">
+      <div class="garantia reveal">
+        <h2 class="section__title">Sin riesgo para ti</h2>
+        <div class="garantia__grid">
+          <div class="garantia__item">
+            <span>☔</span>
+            <p><strong>Si llueve, reprogramamos gratis.</strong> Sin costo adicional, sin letra pequeña.</p>
+          </div>
+          <div class="garantia__item">
+            <span>❎</span>
+            <p><strong>Cancelación flexible hasta 24h antes.</strong> Te devolvemos el 100% del anticipo.</p>
+          </div>
+          <div class="garantia__item">
+            <span>💬</span>
+            <p><strong>Soporte directo por WhatsApp.</strong> Cualquier duda, te respondemos rápido.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="section section--alt" id="galeria">
+    <div class="container">
+      <h2 class="section__title reveal">Esto es real</h2>
+      <p class="section__subtitle reveal">Las fotos no le hacen justicia. Hay que sentirlo.</p>
+      <div class="gallery">
+        <img src="images/galeria-01.jpg" alt="Sendero de montaña" loading="lazy" class="reveal">
+        <img src="images/galeria-02.jpg" alt="Vista panorámica" loading="lazy" class="reveal">
+        <img src="images/galeria-03.jpg" alt="Siembra de árbol" loading="lazy" class="reveal">
+        <img src="images/galeria-04.jpg" alt="Almuerzo campesino" loading="lazy" class="reveal">
+        <img src="images/galeria-05.jpg" alt="Piscina natural" loading="lazy" class="reveal">
+        <img src="images/galeria-06.jpg" alt="Grupo en la montaña" loading="lazy" class="reveal">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="section__title reveal">Preguntas Frecuentes</h2>
+      <!-- OBJECIÓN PRINCIPAL VISIBLE -->
+      <div class="objecion reveal">
+        <p class="objecion__texto">👉 <strong>¿No estás en forma?</strong> No importa. Esto no es un maratón. Es una caminata a tu ritmo, con pausas, sin presión. Si puedes caminar 2 horas tranquilo, puedes vivir esto. Y si prefieres no caminar, tenemos paseo a caballo.</p>
+      </div>
+      <div class="faq reveal">
+
+        <details class="faq__item">
+          <summary>¿Pueden ir niños?</summary>
+          <div class="faq__answer">
+            <p>Sí, pero recomendamos mayores de 10 años que disfruten caminar. Indícanos al reservar si viajan con niños para adaptar el recorrido.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>¿Cómo reservo?</summary>
+          <div class="faq__answer">
+            <p>Llena el formulario de reserva o escríbenos por WhatsApp. Confirmamos disponibilidad y te compartimos el método de pago para separar tu cupo. Se requiere mínimo 48 horas de anticipación.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>¿Qué debo llevar?</summary>
+          <div class="faq__answer">
+            <p>Ropa cómoda, zapatos para caminar (no sandalias), protector solar, gorra, botella de agua y vestido de baño si quieres usar la piscina natural.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>¿Cuántas personas por grupo?</summary>
+          <div class="faq__answer">
+            <p>Grupos de 6 a 12 personas para la aventura estándar. Máximo 15 por día. También ofrecemos aventuras personalizadas desde 2 personas.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>¿Qué días están disponibles?</summary>
+          <div class="faq__answer">
+            <p>Principalmente fines de semana y días previamente agendados. Entre semana bajo reserva y confirmación previa.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>¿Cómo funciona el paseo a caballo?</summary>
+          <div class="faq__answer">
+            <p>Recorres la montaña a caballo con un guía. No necesitas experiencia previa. Los caballos son mansos y el recorrido es seguro. Incluye la siembra de árbol, almuerzo y toda la aventura — solo que sin caminar.</p>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary>¿Qué incluye el camping?</summary>
+          <div class="faq__answer">
+            <p>Todo lo de la aventura de senderismo + una noche en la montaña con fogata, cena, cielo estrellado y desayuno al amanecer. Llevamos carpas y lo necesario. Solo traé ganas de quedarte.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- MICRO-COMPROMISO + RESERVA -->
+  <section class="section section--dark" id="reserva">
+    <div class="container">
+      <!-- MICRO-COMPROMISO -->
+      <div class="micro-commit reveal" id="microCommit">
+        <p class="micro-commit__question">Solo quedan cupos para 2 fechas este mes.</p>
+        <div class="micro-commit__buttons">
+          <button class="btn btn--primary btn--lg" id="microYes">Reservar antes de que se llene</button>
+          <button class="btn btn--outline" id="microNo">Ver fechas disponibles</button>
+        </div>
+      </div>
+      <!-- HEADER RESERVA (se muestra después del micro-commit o por defecto) -->
+      <div class="reserva__header reveal" id="reservaHeader">
+        <h2 class="section__title section__title--light">Este lugar llega a ti justo cuando lo necesitas.</h2>
+        <p class="section__subtitle section__subtitle--light">Cuando siembras tu árbol, te conviertes en Guardián de la Montaña. Solo 4 fechas al mes.</p>
+        <!-- COUNTDOWN -->
+        <div class="countdown" id="countdown">
+          <p class="countdown__label">📅 Próxima aventura:</p>
+          <p class="countdown__date" id="countdownDate"></p>
+          <div class="countdown__timer">
+            <div class="countdown__block">
+              <span class="countdown__number" id="countDays">0</span>
+              <span class="countdown__unit">días</span>
+            </div>
+            <div class="countdown__block">
+              <span class="countdown__number" id="countHours">0</span>
+              <span class="countdown__unit">horas</span>
+            </div>
+            <div class="countdown__block">
+              <span class="countdown__number" id="countMins">0</span>
+              <span class="countdown__unit">min</span>
+            </div>
+            <div class="countdown__block">
+              <span class="countdown__number" id="countSecs">0</span>
+              <span class="countdown__unit">seg</span>
+            </div>
+          </div>
+          <p class="countdown__cupos"><span class="urgency-dot"></span> Quedan <strong id="countdownCupos">4</strong> cupos</p>
+        </div>
+      </div>
+      <!-- RESUMEN VALOR ANTES DEL FORM -->
+      <div class="valor-resumen reveal">
+        <p class="valor-resumen__title">Lo que te llevas a casa:</p>
+        <ul class="valor-resumen__list">
+          <li>✓ Un árbol vivo en la montaña con tu nombre</li>
+          <li>✓ Una carta que te llegará de tu yo del pasado</li>
+          <li>✓ Fotos que no le hacen justicia a lo que viviste</li>
+          <li>✓ Ganas de volver a ver cómo creció tu árbol</li>
+          <li>✓ La certeza de que necesitabas esto más de lo que creías</li>
+        </ul>
+      </div>
+      <form class="form reveal" id="reservaForm">
+        <!-- PASO 1: Lo esencial -->
+        <div class="form__step form__step--active" id="formStep1">
+          <p class="form__step-label">Paso 1 de 2 — Lo esencial</p>
+          <div class="form__grid">
+            <div class="form__group">
+              <label for="nombre">Tu nombre *</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="¿Cómo te llamas?">
+            </div>
+            <div class="form__group">
+              <label for="fecha">¿Qué fecha te gustaría? *</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form__group">
+              <label for="personas">¿Cuántos van? *</label>
+              <input type="number" id="personas" name="personas" min="2" max="15" required placeholder="2-15 personas">
+            </div>
+          </div>
+          <div class="form__actions">
+            <button type="button" class="btn btn--primary btn--glow btn--lg" id="nextStepBtn">Siguiente →</button>
+          </div>
+          <p class="form__note">⚡ Solo 3 datos para empezar</p>
+        </div>
+
+        <!-- PASO 2: Detalles -->
+        <div class="form__step" id="formStep2">
+          <p class="form__step-label">Paso 2 de 2 — Detalles para confirmar</p>
+          <div class="form__grid">
+            <div class="form__group">
+              <label for="telefono">WhatsApp / Teléfono *</label>
+              <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 123 4567">
+            </div>
+            <div class="form__group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form__group">
+              <label for="ciudad">Ciudad de origen</label>
+              <input type="text" id="ciudad" name="ciudad" placeholder="Medellín, Bogotá...">
+            </div>
+            <div class="form__group">
+              <label for="plan">Plan de interés</label>
+              <select id="plan" name="plan">
+                <option value="senderismo">Senderismo (a pie)</option>
+                <option value="caballo">Paseo a caballo</option>
+                <option value="camping">Camping (noche en la montaña)</option>
+                <option value="personalizada">Aventura personalizada</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label for="como_se_entero">¿Cómo nos encontraste?</label>
+              <select id="como_se_entero" name="como_se_entero">
+                <option value="">Seleccionar...</option>
+                <option value="instagram">Instagram</option>
+                <option value="facebook">Facebook</option>
+                <option value="amigo">Un amigo me contó</option>
+                <option value="google">Google</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__group form__group--full">
+            <label for="observaciones">Observaciones (opcional)</label>
+            <textarea id="observaciones" name="observaciones" rows="3" placeholder="Nivel físico, restricciones alimentarias, si viajan con niños..."></textarea>
+          </div>
+          <div class="form__actions form__actions--split">
+            <button type="button" class="btn btn--outline" id="prevStepBtn">← Atrás</button>
+            <button type="submit" class="btn btn--primary btn--glow btn--lg" id="submitBtn">
+              <span class="btn__text">Separar Mi Cupo Ahora</span>
+              <span class="btn__loading" style="display:none">Enviando...</span>
+            </button>
+          </div>
+          <p class="form__note">🔒 Tu información es privada. Al enviar, te conectamos directo por WhatsApp.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CÓMO LLEGAR -->
+  <section class="section" id="como-llegar">
+    <div class="container">
+      <h2 class="section__title reveal">Cómo Llegar</h2>
+      <div class="location__grid">
+        <div class="location__info reveal reveal--left">
+          <p><strong>Hacienda Popalito</strong></p>
+          <p>Vereda La Rápida, San Rafael, Antioquia, Colombia</p>
+          <p>Aproximadamente 2.5 horas desde Medellín por carretera.</p>
+          <p>Te enviaremos indicaciones detalladas al confirmar tu reserva.</p>
+          <a href="https://www.google.com/maps/dir//Hacienda+Popalito,+Vereda+la+R%C3%A1pida,+Via+Popalito,+San+Rafael+Antioquia,+Antioquia,+Colombia/@6.2370093,-75.0414511,17z" class="btn btn--outline" target="_blank" rel="noopener">Ver en Google Maps</a>
+        </div>
+        <div class="location__map reveal reveal--right">
+          <!-- Reemplazar con embed de Google Maps real -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5!2d-75.0414511!3d6.2370093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4401d45e31b873%3A0x2ae973121cf18b5a!2sHacienda%20Popalito!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco" width="100%" height="340" style="border:0;border-radius:16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Hacienda Popalito</p>
+          <p>Guardianes de la Montaña</p>
+          <p>San Rafael, Antioquia — Colombia</p>
+        </div>
+        <div>
+          <p><strong>Contacto</strong></p>
+          <p>WhatsApp: <a href="https://wa.me/573222954445" target="_blank" rel="noopener">+57 322 295 4445</a></p>
+          <p>Email: <a href="mailto:info@haciendapopalito.com">info@haciendapopalito.com</a></p>
+        </div>
+        <div>
+          <p><strong>Síguenos</strong></p>
+          <p><a href="#" target="_blank" rel="noopener">Instagram</a></p>
+          <p><a href="#" target="_blank" rel="noopener">Facebook</a></p>
+        </div>
+      </div>
+      <p class="footer__cierre">"Este lugar llega a ti justo cuando lo necesitas." — Sandro F.</p>
+      <p class="footer__copy">&copy; 2025 Hacienda Popalito. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/573222954445?text=Hola%2C%20quiero%20información%20sobre%20Hacienda%20Popalito." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" width="32" height="32" fill="#fff"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.9 15.9 0 0016.004 32C24.826 32 32 24.826 32 16.004S24.826 0 16.004 0zm9.302 22.602c-.396 1.116-2.326 2.064-3.21 2.148-.804.078-1.812.114-2.922-.186a26.6 26.6 0 01-2.646-1.002c-4.656-2.016-7.698-6.726-7.932-7.038-.234-.312-1.908-2.544-1.908-4.854s1.206-3.444 1.638-3.912c.432-.468.936-.588 1.248-.588.312 0 .624.006.894.018.288.012.672-.108 1.05.804.396.948 1.338 3.258 1.458 3.492.12.234.198.51.042.822-.156.312-.234.51-.468.786-.234.276-.492.618-.702.828-.234.234-.48.486-.204.948.276.462 1.224 2.016 2.628 3.264 1.806 1.602 3.33 2.1 3.792 2.334.462.234.738.198 1.008-.12.276-.312 1.17-1.362 1.482-1.83.312-.468.624-.39 1.056-.234.432.156 2.742 1.296 3.21 1.53.468.234.78.354.894.546.12.198.12 1.116-.276 2.232z"/></svg>
+  </a>
+
+  <!-- STICKY CTA MÓVIL -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="#reserva" class="btn btn--primary btn--glow">Reservar — Solo 4 fechas al mes</a>
+  </div>
+
+  <!-- TOAST PRUEBA SOCIAL -->
+  <div class="toast" id="socialToast">
+    <span class="toast__icon">🌱</span>
+    <span class="toast__text"></span>
+  </div>
+
+  <!-- EXIT INTENT POPUP -->
+  <div class="exit-popup" id="exitPopup">
+    <div class="exit-popup__backdrop" id="exitPopupClose"></div>
+    <div class="exit-popup__box">
+      <button class="exit-popup__close" id="exitPopupX">&times;</button>
+      <span class="exit-popup__icon">🌳</span>
+      <h3>¿Te vas sin separar tu fecha?</h3>
+      <p>Solo abrimos 4 fechas al mes. Las de este mes ya están casi llenas.</p>
+      <a href="#reserva" class="btn btn--primary btn--glow" id="exitPopupCta">Reservar Mi Fecha</a>
+      <a href="https://wa.me/573222954445?text=Hola%2C%20tengo%20dudas%20sobre%20la%20experiencia%20en%20Hacienda%20Popalito." class="exit-popup__link" target="_blank" rel="noopener">¿Tienes dudas? Escríbenos por WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- LEAD CAPTURE MINI (segundo canal) -->
+  <div class="lead-mini" id="leadMini">
+    <div class="lead-mini__content">
+      <p>📅 ¿Aún no decides fecha? Déjanos tu WhatsApp y te avisamos cuando abramos cupos.</p>
+      <form class="lead-mini__form" id="leadMiniForm">
+        <input type="tel" id="leadWhatsapp" placeholder="+57 300 123 4567" required>
+        <button type="submit" class="btn btn--primary">Avisarme</button>
+      </form>
+    </div>
+    <button class="lead-mini__close" id="leadMiniClose">&times;</button>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
