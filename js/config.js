@@ -48,22 +48,23 @@ var CONFIG = {
   // === TOAST (notificaciones de prueba social) ===
   toasts: [
     'María de Medellín reservó hace 2 horas',
-    'Andrés y 4 amigos separaron cupo para el sábado',
-    'Laura de Envigado reservó experiencia privada',
+    'Andrés y 6 amigos separaron cupo para el sábado',
+    'Laura de Envigado reservó aventura privada',
     'Un grupo de Bogotá reservó ayer',
-    'Camila de Rionegro separó cupo hace 30 min'
+    'Camila de Marinilla separó cupo hace 60 min'
   ],
 
   // === PROOF BAR (contadores) ===
   contadores: {
-    arboles: 247,
+    arboles: 450,
     visitantes: 89,
     estrellas: 5,
-    anos: 3
+    anos: 4
   },
 
   // === REDES SOCIALES ===
   instagram: '',  // URL de Instagram
   facebook: '',   // URL de Facebook
-  email: 'info@haciendapopalito.com'
+  tik-tok: '',
+  email: 'haciendapopalito@gmail.com'
 };
