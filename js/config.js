@@ -65,6 +65,6 @@ var CONFIG = {
   // === REDES SOCIALES ===
   instagram: '',  // URL de Instagram
   facebook: '',   // URL de Facebook
-  tik-tok: '',
+  tiktok: '',
   email: 'haciendapopalito@gmail.com'
 };
