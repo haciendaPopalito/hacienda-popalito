@@ -17,11 +17,11 @@ var CONFIG = {
 
   // === PRECIOS ===
   precio_anterior: '350.000',
-  precio_actual: '280.000',
+  precio_actual: '90.000',
 
   // === FECHAS Y CUPOS ===
-  fechas_por_mes: 4,
-  cupos_disponibles: 4,
+  fechas_por_mes: 1,
+  cupos_disponibles: 12,
   // Dejar vacío para que calcule automáticamente el próximo sábado
   // O poner fecha fija: '2025-06-07T07:30:00'
   proxima_fecha: '',
