@@ -162,19 +162,6 @@
   var nextBtn = document.getElementById('nextStepBtn');
   var prevBtn = document.getElementById('prevStepBtn');
 
-  // Micro-compromiso
-  var microCommit = document.getElementById('microCommit');
-  var microYes = document.getElementById('microYes');
-  var microNo = document.getElementById('microNo');
-  var reservaHeader = document.getElementById('reservaHeader');
-
-  microYes.addEventListener('click', function () {
-    microCommit.classList.add('hidden');
-    reservaHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-  microNo.addEventListener('click', function () {
-    microCommit.classList.add('hidden');
-  });
 
   // Paso 1 → 2
   nextBtn.addEventListener('click', function () {
@@ -250,44 +237,6 @@
   hoy.setDate(hoy.getDate() + 2);
   fechaInput.min = hoy.toISOString().split('T')[0];
 
-  // === COUNTDOWN ===
-  function getNextSaturday() {
-    var d = new Date();
-    var daysUntilSat = (6 - d.getDay() + 7) % 7;
-    if (daysUntilSat < 3) daysUntilSat += 7;
-    d.setDate(d.getDate() + daysUntilSat);
-    d.setHours(7, 30, 0, 0);
-    return d;
-  }
-
-  var PROXIMA_FECHA = CONFIG.proxima_fecha ? new Date(CONFIG.proxima_fecha) : getNextSaturday();
-
-  function formatDateSpanish(date) {
-    var dias = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
-    var meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-    return dias[date.getDay()] + ' ' + date.getDate() + ' de ' + meses[date.getMonth()];
-  }
-
-  var countdownDateEl = document.getElementById('countdownDate');
-  var countDays = document.getElementById('countDays');
-  var countHours = document.getElementById('countHours');
-  var countMins = document.getElementById('countMins');
-  var countSecs = document.getElementById('countSecs');
-  var countdownCupos = document.getElementById('countdownCupos');
-
-  countdownDateEl.textContent = formatDateSpanish(PROXIMA_FECHA);
-  countdownCupos.textContent = CONFIG.cupos_disponibles;
-
-  function updateCountdown() {
-    var diff = PROXIMA_FECHA - new Date();
-    if (diff <= 0) { countDays.textContent = countHours.textContent = countMins.textContent = countSecs.textContent = '0'; return; }
-    countDays.textContent = Math.floor(diff / 86400000);
-    countHours.textContent = Math.floor((diff % 86400000) / 3600000);
-    countMins.textContent = Math.floor((diff % 3600000) / 60000);
-    countSecs.textContent = Math.floor((diff % 60000) / 1000);
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
 
   // === SMOOTH SCROLL ===
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
