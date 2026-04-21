@@ -17,11 +17,11 @@ var CONFIG = {
 
   // === PRECIOS ===
   precio_anterior: '350.000',
-  precio_actual: '90.000',
+  precio_actual: '280.000',
 
   // === FECHAS Y CUPOS ===
-  fechas_por_mes: 1,
-  cupos_disponibles: 12,
+  fechas_por_mes: 4,
+  cupos_disponibles: 4,
   // Dejar vacío para que calcule automáticamente el próximo sábado
   // O poner fecha fija: '2025-06-07T07:30:00'
   proxima_fecha: '',
@@ -48,23 +48,22 @@ var CONFIG = {
   // === TOAST (notificaciones de prueba social) ===
   toasts: [
     'María de Medellín reservó hace 2 horas',
-    'Andrés y 6 amigos separaron cupo para el sábado',
-    'Laura de Envigado reservó aventura privada',
+    'Andrés y 4 amigos separaron cupo para el sábado',
+    'Laura de Envigado reservó experiencia privada',
     'Un grupo de Bogotá reservó ayer',
-    'Camila de Marinilla separó cupo hace 60 min'
+    'Camila de Rionegro separó cupo hace 30 min'
   ],
 
   // === PROOF BAR (contadores) ===
   contadores: {
-    arboles: 450,
+    arboles: 247,
     visitantes: 89,
     estrellas: 5,
-    anos: 4
+    anos: 3
   },
 
   // === REDES SOCIALES ===
   instagram: '',  // URL de Instagram
   facebook: '',   // URL de Facebook
-  tiktok: '',
-  email: 'haciendapopalito@gmail.com'
+  email: 'info@haciendapopalito.com'
 };
