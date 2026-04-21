@@ -311,13 +311,15 @@
   document.getElementById('exitPopupX').addEventListener('click', closeExitPopup);
   document.getElementById('exitPopupCta').addEventListener('click', closeExitPopup);
 
-  // === LEAD MINI ===
+  // === LEAD MINI (toggle desde botón) ===
   var leadMini = document.getElementById('leadMini');
-  var leadShown = false;
-  setTimeout(function () {
-    if (!leadShown) { leadShown = true; leadMini.classList.add('visible'); }
-  }, 45000);
   document.getElementById('leadMiniClose').addEventListener('click', function () { leadMini.classList.remove('visible'); });
+  var leadToggle = document.getElementById('leadToggle');
+  if (leadToggle) {
+    leadToggle.addEventListener('click', function () {
+      leadMini.classList.toggle('visible');
+    });
+  }
   document.getElementById('leadMiniForm').addEventListener('submit', function (e) {
     e.preventDefault();
     var phone = document.getElementById('leadWhatsapp').value.trim();
