@@ -257,6 +257,34 @@ a { color: var(--verde-bosque); text-decoration: none; }
   box-shadow: 0 12px 35px rgba(212,197,169,0.4);
 }
 
+/* ============ ESPEJO ============ */
+.espejo { max-width: 680px; margin: 0 auto; }
+.espejo__sintomas { margin: 40px 0; }
+.espejo__sintoma {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 1.02rem; color: var(--gris-piedra); line-height: 1.6;
+}
+.espejo__num {
+  font-family: var(--font-heading); font-style: italic;
+  color: var(--dorado); min-width: 24px; font-size: 0.9rem; margin-top: 3px;
+}
+.espejo__cierre {
+  font-family: var(--font-heading); font-size: 1.3rem; font-style: italic;
+  color: var(--verde-bosque); text-align: center; line-height: 1.5;
+  margin-top: 32px; border: none; padding: 0;
+}
+
+/* ============ HERO EM ============ */
+.hero__title em {
+  font-style: italic; color: var(--beige);
+}
+
+/* ============ PRICING CONTEXTO ============ */
+.pricing__contexto {
+  font-size: 1.1rem; color: var(--gris-piedra); margin-bottom: 16px; line-height: 1.6;
+}
+
 /* ============ SECTION TITLES ============ */
 .section__title {
   font-family: var(--font-heading); font-size: clamp(1.7rem, 3.5vw, 2.6rem);
@@ -503,6 +531,35 @@ a { color: var(--verde-bosque); text-decoration: none; }
   margin-bottom: 8px; font-size: 1.05rem;
 }
 .include-card p { color: var(--gris-piedra); font-size: 0.9rem; }
+
+/* ============ PRICING EXPERT ============ */
+.pricing-expert { max-width: 640px; margin: 0 auto; text-align: center; }
+.pricing-expert em { font-style: italic; color: var(--dorado); }
+.precio-tabla {
+  background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px; padding: 32px; margin: 32px 0; text-align: left;
+}
+.precio-fila {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-size: 0.95rem; color: var(--gris-piedra);
+}
+.precio-fila:last-child { border-bottom: none; }
+.precio-fila--principal {
+  padding: 20px 0 12px; color: var(--verde-bosque); font-size: 1.05rem;
+}
+.precio-tachado {
+  text-decoration: line-through; opacity: 0.5; font-size: 0.9rem; margin-right: 8px;
+}
+.precio-actual {
+  font-family: var(--font-heading); font-size: 1.8rem; color: var(--verde-bosque);
+}
+.pricing-garantias {
+  text-align: left; margin: 24px 0 32px;
+}
+.pricing-garantias p {
+  font-size: 0.9rem; color: var(--gris-piedra); padding: 8px 0; line-height: 1.5;
+}
 
 /* ============ PRICING ============ */
 .pricing { text-align: center; }
