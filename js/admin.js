@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  const ADMIN_PASSWORD = 'Hacienda.popalito206.';
+  const ADMIN_PASSWORD = 'popalito2025';
   const ADMIN_TOKEN_KEY = 'hacienda_admin_token';
   const TOKEN_EXPIRY = 24 * 60 * 60 * 1000;
 

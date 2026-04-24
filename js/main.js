@@ -102,9 +102,19 @@
 
   var toggle = document.getElementById('navToggle');
   var menu = document.getElementById('navMenu');
-  toggle.addEventListener('click', function () { menu.classList.toggle('active'); });
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    menu.classList.toggle('active');
+  });
   menu.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () { menu.classList.remove('active'); });
+    link.addEventListener('click', function () {
+      menu.classList.remove('active');
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.nav')) {
+      menu.classList.remove('active');
+    }
   });
 
   // === STICKY CTA MÓVIL ===
@@ -181,6 +191,23 @@
     step2.classList.add('form__step--active');
   });
 
+  // Validación paso 2 antes de submit
+  function validateStep2() {
+    var telefono = form.telefono.value.trim();
+    var email = form.email.value.trim();
+    var errors = [];
+    if (!telefono) errors.push(form.telefono);
+    if (!email) errors.push(form.email);
+    if (errors.length > 0) {
+      errors.forEach(function (input) {
+        input.style.borderColor = 'rgba(255,107,107,0.7)';
+        input.style.boxShadow = '0 0 0 3px rgba(255,107,107,0.15)';
+      });
+      return false;
+    }
+    return true;
+  }
+
   // Paso 2 → 1
   prevBtn.addEventListener('click', function () {
     step2.classList.remove('form__step--active');
@@ -204,6 +231,7 @@
   // Submit → Google Sheets + WhatsApp
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (!validateStep2()) return;
     var btnText = submitBtn.querySelector('.btn__text');
     var btnLoading = submitBtn.querySelector('.btn__loading');
     btnText.style.display = 'none';
@@ -219,7 +247,8 @@
       ciudad: form.ciudad.value.trim() || 'No indicada',
       plan: form.plan.options[form.plan.selectedIndex].text,
       como_se_entero: form.como_se_entero.options[form.como_se_entero.selectedIndex].text,
-      observaciones: form.observaciones.value.trim()
+      observaciones: form.observaciones.value.trim(),
+      fecha_de_reserva: form.fecha_de_reserva.value.trim()
     };
 
     fetch('https://script.google.com/macros/library/d/1DYr4ljwnQHxLjm_QPk3Eyh1E3uPEz0KwoBIJ7tkKhExq2B192HOnTRs5/2', {
@@ -274,7 +303,11 @@
   var exitShown = false;
   function closeExitPopup() { exitPopup.classList.remove('visible'); }
   document.addEventListener('mouseleave', function (e) {
-    if (e.clientY < 5 && !exitShown) { exitShown = true; exitPopup.classList.add('visible'); }
+    if (e.clientY < 5 && !exitShown) { 
+      exitShown = true; 
+      exitPopup.classList.add('visible');
+      setTimeout(function () { closeExitPopup(); }, 8000);
+    }
   });
   document.getElementById('exitPopupClose').addEventListener('click', closeExitPopup);
   document.getElementById('exitPopupX').addEventListener('click', closeExitPopup);
