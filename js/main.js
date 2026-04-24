@@ -201,7 +201,7 @@
     });
   });
 
-  // Submit → WhatsApp
+  // Submit → Google Sheets + WhatsApp
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var btnText = submitBtn.querySelector('.btn__text');
@@ -210,16 +210,33 @@
     btnLoading.style.display = 'inline';
     submitBtn.disabled = true;
 
+    var reservaData = {
+      nombre: form.nombre.value.trim(),
+      telefono: form.telefono.value.trim(),
+      email: form.email.value.trim(),
+      fecha: form.fecha.value,
+      personas: form.personas.value,
+      ciudad: form.ciudad.value.trim() || 'No indicada',
+      plan: form.plan.options[form.plan.selectedIndex].text,
+      como_se_entero: form.como_se_entero.options[form.como_se_entero.selectedIndex].text,
+      observaciones: form.observaciones.value.trim()
+    };
+
+    fetch('https://script.google.com/macros/s/AKfycbx_AhpDagttDjsoixGQZp2XFP9Vh4qyzDBECgC1VXlPZDwjZcJPybVwqvcvKXWWHVtUMQ/exec', {
+      method: 'POST',
+      body: JSON.stringify(reservaData)
+    }).catch(function () {});
+
     var mensaje =
       '🌿 *Nueva reserva — Hacienda Popalito*\n\n' +
-      '👤 *Nombre:* ' + form.nombre.value.trim() + '\n' +
-      '📱 *WhatsApp:* ' + form.telefono.value.trim() + '\n' +
-      '📧 *Email:* ' + form.email.value.trim() + '\n' +
-      '📅 *Fecha:* ' + form.fecha.value + '\n' +
-      '👥 *Personas:* ' + form.personas.value + '\n' +
-      '📍 *Ciudad:* ' + (form.ciudad.value.trim() || 'No indicada') + '\n' +
-      '🎯 *Plan:* ' + form.plan.options[form.plan.selectedIndex].text + '\n' +
-      (form.observaciones.value.trim() ? '📝 *Obs:* ' + form.observaciones.value.trim() + '\n' : '') +
+      '👤 *Nombre:* ' + reservaData.nombre + '\n' +
+      '📱 *WhatsApp:* ' + reservaData.telefono + '\n' +
+      '📧 *Email:* ' + reservaData.email + '\n' +
+      '📅 *Fecha:* ' + reservaData.fecha + '\n' +
+      '👥 *Personas:* ' + reservaData.personas + '\n' +
+      '📍 *Ciudad:* ' + reservaData.ciudad + '\n' +
+      '🎯 *Plan:* ' + reservaData.plan + '\n' +
+      (reservaData.observaciones ? '📝 *Obs:* ' + reservaData.observaciones + '\n' : '') +
       '\n¡Quedo atento a la confirmación! 🙌';
 
     var url = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(mensaje);
@@ -236,6 +253,9 @@
   var hoy = new Date();
   hoy.setDate(hoy.getDate() + 2);
   fechaInput.min = hoy.toISOString().split('T')[0];
+
+  // === CONFIG GLOBAL ===
+  window.CONFIG = CONFIG;
 
 
   // === SMOOTH SCROLL ===
