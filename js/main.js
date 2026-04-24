@@ -247,8 +247,7 @@
       ciudad: form.ciudad.value.trim() || 'No indicada',
       plan: form.plan.options[form.plan.selectedIndex].text,
       como_se_entero: form.como_se_entero.options[form.como_se_entero.selectedIndex].text,
-      observaciones: form.observaciones.value.trim(),
-      fecha_de_reserva: form.fecha_de_reserva.value()
+      observaciones: form.observaciones.value.trim()
     };
 
     fetch('https://script.google.com/macros/library/d/1DYr4ljwnQHxLjm_QPk3Eyh1E3uPEz0KwoBIJ7tkKhExq2B192HOnTRs5/2', {
