@@ -222,7 +222,7 @@
       observaciones: form.observaciones.value.trim()
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbx_AhpDagttDjsoixGQZp2XFP9Vh4qyzDBECgC1VXlPZDwjZcJPybVwqvcvKXWWHVtUMQ/exec', {
+    fetch('https://script.google.com/macros/library/d/1DYr4ljwnQHxLjm_QPk3Eyh1E3uPEz0KwoBIJ7tkKhExq2B192HOnTRs5/2', {
       method: 'POST',
       body: JSON.stringify(reservaData)
     }).catch(function () {});
